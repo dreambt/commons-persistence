@@ -13,10 +13,16 @@ package cn.im47.utils.persistence;
  * @author baitao.ji
  * @version 0.1, 13-3-22 下午9:19
  */
-public interface VersionEntity<IDClass extends java.io.Serializable> extends Entity<IDClass> {
+public class VersionEntity extends Entity {
 
-	public void setVersion(Long version);
+	private Long version;
 
-	public Long getVersion();
+	public Long getVersion() {
+		return version;
+	}
+
+	public void setVersion(Long version) {
+		this.version = version;
+	}
 
 }
